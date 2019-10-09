@@ -2,8 +2,11 @@ import pymysql
 import sys
 import optparse
 
-EXIT_CODE = 1
-INSERT_STMT = "INSERT INTO %s ('name','department','number') VALUES (%s,%s,%s)"
+HOST = 'localhost'
+USERNAME = 'root'
+PASSWORD = "Admin@1234"
+
+exit_code = 1
 
 parser = optparse.OptionParser()
 
@@ -14,26 +17,48 @@ parser.add_option('-t', '--table', dest='table', help='Give the table name to be
 
 if not options.db:
     parser.error("Please enter database name")
-    sys.exit(EXIT_CODE)
+    sys.exit(exit_code)
 
 if not options.table:
     parser.error('Please enter table name')
-    sys.exit(EXIT_CODE)
+    sys.exit(exit_code)
 
-db, table = options.db, options.table.upper()
+db, table = options.db, options.table
 conn = pymysql.connect(host='localhost', user='root', password='Admin@1234', db=db)
 
-create_stmt = "CREATE TABLE IF NOT EXISTS %s(ID INT(5) NOT NULL AUTO_INCREMENT,NAME VARCHAR(255) NOT NULL, DEPARTMENT VARCHAR(255) NOT NULL, SALARY FLOAT(9,2) NOT NULL, PRIMARY KEY(ID));" % table
+
+create_stmt = '''
+
+CREATE TABLE IF NOT EXISTS %(table_name)s(
+id INT(5) NOT NULL AUTO_INCREMENT,
+name VARCHAR(255) NOT NULL,
+department VARCHAR(255) NOT NULL,
+salary FLOAT(9,2) NOT NULL,
+PRIMARY KEY(id));
+
+''' % {"table_name": table}
 
 try:
     with conn.cursor() as cur:
         cur.execute(create_stmt)
     conn.commit()
 
-    EXIT_CODE = 0
+    exit_code = 0
+
+except pymysql.MySQLError, e:
+    print "MySQL error: ", e
+
+except pymysql.DatabaseError, e:
+    print "Database Error occured: ", e
+
+except pymysql.ProgrammingError, e:
+    print "Programming Error: ", e
+
+except pymysql.InternalError, e:
+    print "Internal Error occured: ", e
 
 except Exception, e:
-    print e
+    print "Exception caught: ", e
 
 finally:
-    sys.exit(int(EXIT_CODE))
+    sys.exit(int(exit_code))

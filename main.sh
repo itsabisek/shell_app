@@ -8,21 +8,18 @@ echo -e "Enter data file name- \c"
 read file
 
 python create_table.py --db=$db --table=$table
-status=$?
 
 
-if [ $status -eq 0 ]
-
+if [[ $? == "0" ]]
 then
   echo "Table created"
   python insert_data.py --db=$db --table=$table --data=$file
-  status=$?
 
-  if [ $status -eq 0 ]
+  if [[ $? == "0" ]]
   then
-    echo "Insertion successfull"
+    echo "Importing successfull"
   else
-    echo "Insertion failed"
+    echo "Import failed"
   fi
 
 else
