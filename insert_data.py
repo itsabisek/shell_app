@@ -4,8 +4,18 @@ import sys
 import os
 import csv
 import traceback as tb
+import logging
+
 # from concurrent.futures import ThreadPoolExecutor, as_completed
 # import thread
+
+formatter = logging.Formatter('%(filename)s:%(levelname)s:%(name)s:%(message)s')
+file_handler = logging.FileHandler('table_data.log')
+file_handler.setFormatter(formatter)
+
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+logger.addHandler(file_handler)
 
 HOST = 'localhost'
 USERNAME = 'root'
@@ -21,8 +31,10 @@ def get_csv_data(data_path):
         for row in reader:
             if validate_row(row):
                 data.append(row)
+                logger.info("Will be inserting row %s" % row)
             else:
                 empty_entries.append(row)
+                logger.warning("Empty cell in row %s. Excluding it." % row)
     return data, empty_entries
 
 
@@ -47,7 +59,7 @@ def insert_data(connection, data):
 
     # print insert_stmt
     with connection.cursor() as cur:
-        cur.execute(insert_stmt)
+        return cur.execute(insert_stmt)
 
 
 exit_code = 1
@@ -75,45 +87,61 @@ if not options.data:
 db, table = options.db, options.table
 data_path = os.path.join(os.path.abspath(os.curdir), options.data)
 
+
 try:
     conn = pymysql.connect(host=HOST, user=USERNAME, password=PASSWORD, db=db)
+    logger.info("Connection established")
+    logger.info("Using database %(db)s Table %(table)s" % {"db": db, "table": table})
+    logger.info("Will be importing data from path %s" % (data_path))
 
     data, empty_entries = get_csv_data(data_path)
+    logger.info("Will be inserting %d data rows" % len(data))
+    logger.warning("Skipping %d data rows. They have empty values" % len(empty_entries))
+
+    insert_count = 0
     for entry in data:
-        insert_data(conn, entry)
+        insert_count += insert_data(conn, entry)
 
     exit_code = 0
+    logger.info("Inserted %d rows in db" % insert_count)
 
 except IOError, e:
-    print "IO Error: ", e
+    logger.critical("IO Error: %s" % e)
     tb.print_exc()
 
 except pymysql.MySQLError, e:
-    print "MySQL error: ", e
+    logger.critical("MySQL Error: %s" % e)
+    # print "MySQL error: ", e
     tb.print_exc()
 
 except pymysql.DatabaseError, e:
-    print "Database Error occured: ", e
+    logger.critical("Database Error: %s" % e)
+    # print "Database Error occured: ", e
     tb.print_exc()
 
 except pymysql.ProgrammingError, e:
-    print "Programming Error: ", e
+    logger.critical("Programming Error: %s" % e)
+    # print "Programming Error: ", e
     tb.print_exc()
 
 except pymysql.InternalError, e:
-    print "Internal Error occured: ", e
+    logger.critical("Internal Error occured: " % e)
+    # print "Internal Error occured: ", e
     tb.print_exc()
 
 except pymysql.DataError, e:
-    print "Invalid data: ", e
+    logger.critical("Invalid data: %s" % e)
+    # print "Invalid data: ", e
     tb.print_exc()
 
 except Exception, e:
-    print "Exception caught: ", e
+    logger.critical("Exception caught: %s" % e)
+    # print "Exception caught: ", e
     tb.print_exc()
 
 finally:
     conn.commit()
     conn.close()
 
+logger.info("Exiting with exit code %d" % exit_code)
 sys.exit(exit_code)

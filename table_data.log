@@ -1,0 +1,42 @@
+create_table.py:INFO:__main__:Connection established
+create_table.py:INFO:__main__:Using database testdb Table emp
+create_table.py:INFO:__main__:Created table emp
+create_table.py:INFO:__main__:Create statement is - 
+
+    CREATE TABLE IF NOT EXISTS emp(
+    id INT(5) NOT NULL AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    department VARCHAR(255) NOT NULL,
+    salary FLOAT(9,2) NOT NULL,
+    PRIMARY KEY(id));
+
+    
+insert_data.py:INFO:__main__:Connection established
+insert_data.py:INFO:__main__:Using database testdb Table emp
+insert_data.py:INFO:__main__:Will be importing data from path /home/abisekm/Documents/Shell/shell1/datafile.txt
+insert_data.py:WARNING:__main__:Empty cell in row ['', 'Human Resources', '41354.87']. Excluding it.
+insert_data.py:INFO:__main__:Will be inserting row ['Sal Harlick', 'Accounting', '64077.37']
+insert_data.py:INFO:__main__:Will be inserting row ['La verne Iorns', 'Human Resources', '64602.23']
+insert_data.py:INFO:__main__:Will be inserting row ['Tedmund Burgher', 'Human Resources', '23151.87']
+insert_data.py:WARNING:__main__:Empty cell in row ['Zaccaria Colleford', 'Accounting', '']. Excluding it.
+insert_data.py:INFO:__main__:Will be inserting row ['Eleni Clapston', 'Product Management', '42282.6']
+insert_data.py:WARNING:__main__:Empty cell in row ['Eachelle Alexsandrovich', '', '27170.7']. Excluding it.
+insert_data.py:INFO:__main__:Will be inserting row ['Esmeralda Jindrak', 'Product Management', '24921.07']
+insert_data.py:WARNING:__main__:Empty cell in row ['', 'Marketing', '46833.99']. Excluding it.
+insert_data.py:WARNING:__main__:Empty cell in row ['', 'Research and Development', '30231.58']. Excluding it.
+insert_data.py:INFO:__main__:Will be inserting row ['Nu\xc3\xb3', 'Marketing', '39939.05']
+insert_data.py:INFO:__main__:Will be inserting row ['Oph\xc3\xa9lie', 'Marketing', '85259.42']
+insert_data.py:INFO:__main__:Will be inserting row ['C\xc3\xa9line', 'Accounting', '53034.42']
+insert_data.py:INFO:__main__:Will be inserting row ['L\xc3\xa9ane', 'Legal', '1259.6']
+insert_data.py:INFO:__main__:Will be inserting row ['Desir\xc3\xa9e', 'Research and Development', '52388.89']
+insert_data.py:INFO:__main__:Will be inserting row ['Jos\xc3\xa9e', 'Business Development', '26624.49']
+insert_data.py:INFO:__main__:Will be inserting row ['M\xc3\xa9lia', 'Product Management', '81170.13']
+insert_data.py:INFO:__main__:Will be inserting row ['Laur\xc3\xa9lie', 'Research and Development', '35252.06']
+insert_data.py:INFO:__main__:Will be inserting row ['R\xc3\xa1o', 'Accounting', '71415.77']
+insert_data.py:INFO:__main__:Will be inserting row ['N\xc3\xa9h\xc3\xa9mie', 'Business Development', '18617.0']
+insert_data.py:INFO:__main__:Will be inserting row ["Ju'an", 'Marketing', '72343.29']
+insert_data.py:INFO:__main__:Will be inserting row ['Robert-deSylivia', ' Sales', ' 99898.009']
+insert_data.py:INFO:__main__:Will be inserting 17 data rows
+insert_data.py:WARNING:__main__:Skipping 5 data rows. They have empty values
+insert_data.py:INFO:__main__:Inserted 17 rows in db
+insert_data.py:INFO:__main__:Exiting with exit code 0
