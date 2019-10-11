@@ -40,3 +40,580 @@ insert_data.py:INFO:__main__:Will be inserting 17 data rows
 insert_data.py:WARNING:__main__:Skipping 5 data rows. They have empty values
 insert_data.py:INFO:__main__:Inserted 17 rows in db
 insert_data.py:INFO:__main__:Exiting with exit code 0
+create_table.py:INFO:__main__:Connection established
+create_table.py:INFO:__main__:Using database testdb Table emp
+create_table.py:INFO:__main__:Created table emp
+create_table.py:INFO:__main__:Create statement is - 
+
+    CREATE TABLE IF NOT EXISTS emp(
+    id INT(5) NOT NULL AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    department VARCHAR(255) NOT NULL,
+    salary FLOAT(9,2) NOT NULL,
+    PRIMARY KEY(id));
+
+    
+create_table.py:INFO:__main__:Exiting with exit code-0
+insert_data.py:INFO:__main__:Connection established
+insert_data.py:INFO:__main__:Using database testdb Table emp
+insert_data.py:INFO:__main__:Will be importing data from path /home/abisekm/Documents/Shell/shell1/datafile.txt
+insert_data.py:WARNING:__main__:Empty cell in row ['', 'Human Resources', '41354.87']. Excluding it.
+insert_data.py:INFO:__main__:Will be inserting row ['Sal Harlick', 'Accounting', '64077.37']
+insert_data.py:INFO:__main__:Will be inserting row ['La verne Iorns', 'Human Resources', '64602.23']
+insert_data.py:INFO:__main__:Will be inserting row ['Tedmund Burgher', 'Human Resources', '23151.87']
+insert_data.py:WARNING:__main__:Empty cell in row ['Zaccaria Colleford', 'Accounting', '']. Excluding it.
+insert_data.py:INFO:__main__:Will be inserting row ['Eleni Clapston', 'Product Management', '42282.6']
+insert_data.py:WARNING:__main__:Empty cell in row ['Eachelle Alexsandrovich', '', '27170.7']. Excluding it.
+insert_data.py:INFO:__main__:Will be inserting row ['Esmeralda Jindrak', 'Product Management', '24921.07']
+insert_data.py:WARNING:__main__:Empty cell in row ['', 'Marketing', '46833.99']. Excluding it.
+insert_data.py:WARNING:__main__:Empty cell in row ['', 'Research and Development', '30231.58']. Excluding it.
+insert_data.py:INFO:__main__:Will be inserting row ['Nu\xc3\xb3', 'Marketing', '39939.05']
+insert_data.py:INFO:__main__:Will be inserting row ['Oph\xc3\xa9lie', 'Marketing', '85259.42']
+insert_data.py:INFO:__main__:Will be inserting row ['C\xc3\xa9line', 'Accounting', '53034.42']
+insert_data.py:INFO:__main__:Will be inserting row ['L\xc3\xa9ane', 'Legal', '1259.6']
+insert_data.py:INFO:__main__:Will be inserting row ['Desir\xc3\xa9e', 'Research and Development', '52388.89']
+insert_data.py:INFO:__main__:Will be inserting row ['Jos\xc3\xa9e', 'Business Development', '26624.49']
+insert_data.py:INFO:__main__:Will be inserting row ['M\xc3\xa9lia', 'Product Management', '81170.13']
+insert_data.py:INFO:__main__:Will be inserting row ['Laur\xc3\xa9lie', 'Research and Development', '35252.06']
+insert_data.py:INFO:__main__:Will be inserting row ['R\xc3\xa1o', 'Accounting', '71415.77']
+insert_data.py:INFO:__main__:Will be inserting row ['N\xc3\xa9h\xc3\xa9mie', 'Business Development', '18617.0']
+insert_data.py:INFO:__main__:Will be inserting row ["Ju'an", 'Marketing', '72343.29']
+insert_data.py:INFO:__main__:Will be inserting row ['Robert-deSylivia', ' Sales', ' 99898.009']
+insert_data.py:INFO:__main__:Will be inserting 17 data rows
+insert_data.py:WARNING:__main__:Skipping 5 data rows. They have empty values
+insert_data.py:ERROR:__main__:Exception caught: unsupported operand type(s) for //: 'str' and 'int'
+Traceback (most recent call last):
+  File "insert_data.py", line 105, in <module>
+    logger.info("Creating thread 1 to insert %d rows " % len(data) // 2)
+TypeError: unsupported operand type(s) for //: 'str' and 'int'
+insert_data.py:INFO:__main__:Exiting with exit code 1
+create_table.py:INFO:__main__:Connection established
+create_table.py:INFO:__main__:Using database testdb Table emp
+create_table.py:INFO:__main__:Created table emp
+create_table.py:INFO:__main__:Create statement is - 
+
+    CREATE TABLE IF NOT EXISTS emp(
+    id INT(5) NOT NULL AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    department VARCHAR(255) NOT NULL,
+    salary FLOAT(9,2) NOT NULL,
+    PRIMARY KEY(id));
+
+    
+create_table.py:INFO:__main__:Exiting with exit code-0
+[2019-10-11 12:40:06,991] [insert_data.py] [INFO] [__main__] - Connection established
+[2019-10-11 12:40:06,992] [insert_data.py] [INFO] [__main__] - Using database testdb Table emp
+[2019-10-11 12:40:06,992] [insert_data.py] [INFO] [__main__] - Will be importing data from path /home/abisekm/Documents/Shell/shell1/datafile.txt
+[2019-10-11 12:40:06,992] [insert_data.py] [WARNING] [__main__] - Empty cell in row ['', 'Human Resources', '41354.87']. Excluding it.
+[2019-10-11 12:40:06,992] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Sal Harlick', 'Accounting', '64077.37']
+[2019-10-11 12:40:06,992] [insert_data.py] [INFO] [__main__] - Will be inserting row ['La verne Iorns', 'Human Resources', '64602.23']
+[2019-10-11 12:40:06,992] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Tedmund Burgher', 'Human Resources', '23151.87']
+[2019-10-11 12:40:06,992] [insert_data.py] [WARNING] [__main__] - Empty cell in row ['Zaccaria Colleford', 'Accounting', '']. Excluding it.
+[2019-10-11 12:40:06,992] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Eleni Clapston', 'Product Management', '42282.6']
+[2019-10-11 12:40:06,992] [insert_data.py] [WARNING] [__main__] - Empty cell in row ['Eachelle Alexsandrovich', '', '27170.7']. Excluding it.
+[2019-10-11 12:40:06,993] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Esmeralda Jindrak', 'Product Management', '24921.07']
+[2019-10-11 12:40:06,993] [insert_data.py] [WARNING] [__main__] - Empty cell in row ['', 'Marketing', '46833.99']. Excluding it.
+[2019-10-11 12:40:06,993] [insert_data.py] [WARNING] [__main__] - Empty cell in row ['', 'Research and Development', '30231.58']. Excluding it.
+[2019-10-11 12:40:06,993] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Nu\xc3\xb3', 'Marketing', '39939.05']
+[2019-10-11 12:40:06,993] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Oph\xc3\xa9lie', 'Marketing', '85259.42']
+[2019-10-11 12:40:06,993] [insert_data.py] [INFO] [__main__] - Will be inserting row ['C\xc3\xa9line', 'Accounting', '53034.42']
+[2019-10-11 12:40:06,993] [insert_data.py] [INFO] [__main__] - Will be inserting row ['L\xc3\xa9ane', 'Legal', '1259.6']
+[2019-10-11 12:40:06,993] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Desir\xc3\xa9e', 'Research and Development', '52388.89']
+[2019-10-11 12:40:06,993] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Jos\xc3\xa9e', 'Business Development', '26624.49']
+[2019-10-11 12:40:06,993] [insert_data.py] [INFO] [__main__] - Will be inserting row ['M\xc3\xa9lia', 'Product Management', '81170.13']
+[2019-10-11 12:40:06,993] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Laur\xc3\xa9lie', 'Research and Development', '35252.06']
+[2019-10-11 12:40:06,994] [insert_data.py] [INFO] [__main__] - Will be inserting row ['R\xc3\xa1o', 'Accounting', '71415.77']
+[2019-10-11 12:40:06,994] [insert_data.py] [INFO] [__main__] - Will be inserting row ['N\xc3\xa9h\xc3\xa9mie', 'Business Development', '18617.0']
+[2019-10-11 12:40:06,994] [insert_data.py] [INFO] [__main__] - Will be inserting row ["Ju'an", 'Marketing', '72343.29']
+[2019-10-11 12:40:06,994] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Robert-deSylivia', ' Sales', ' 99898.009']
+[2019-10-11 12:40:06,994] [insert_data.py] [INFO] [__main__] - Will be inserting 17 data rows
+[2019-10-11 12:40:06,994] [insert_data.py] [WARNING] [__main__] - Skipping 5 data rows. They have empty values
+[2019-10-11 12:40:06,994] [insert_data.py] [INFO] [__main__] - Creating thread 1 to insert 8 rows 
+[2019-10-11 12:40:06,994] [insert_data.py] [INFO] [__main__] - Creating thread 2 to insert 8 rows 
+[2019-10-11 12:40:12,000] [insert_data.py] [INFO] [__main__] - Exiting with exit code 0
+create_table.py:INFO:__main__:Connection established
+create_table.py:INFO:__main__:Using database testdb Table emp
+create_table.py:INFO:__main__:Created table emp
+create_table.py:INFO:__main__:Create statement is - 
+
+    CREATE TABLE IF NOT EXISTS emp(
+    id INT(5) NOT NULL AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    department VARCHAR(255) NOT NULL,
+    salary FLOAT(9,2) NOT NULL,
+    PRIMARY KEY(id));
+
+    
+create_table.py:INFO:__main__:Exiting with exit code-0
+[2019-10-11 12:42:07,088] [insert_data.py] [INFO] [__main__] - Connection established
+[2019-10-11 12:42:07,088] [insert_data.py] [INFO] [__main__] - Using database testdb Table emp
+[2019-10-11 12:42:07,088] [insert_data.py] [INFO] [__main__] - Will be importing data from path /home/abisekm/Documents/Shell/shell1/datafile.txt
+[2019-10-11 12:42:07,088] [insert_data.py] [WARNING] [__main__] - Empty cell in row ['', 'Human Resources', '41354.87']. Excluding it.
+[2019-10-11 12:42:07,088] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Sal Harlick', 'Accounting', '64077.37']
+[2019-10-11 12:42:07,089] [insert_data.py] [INFO] [__main__] - Will be inserting row ['La verne Iorns', 'Human Resources', '64602.23']
+[2019-10-11 12:42:07,089] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Tedmund Burgher', 'Human Resources', '23151.87']
+[2019-10-11 12:42:07,089] [insert_data.py] [WARNING] [__main__] - Empty cell in row ['Zaccaria Colleford', 'Accounting', '']. Excluding it.
+[2019-10-11 12:42:07,089] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Eleni Clapston', 'Product Management', '42282.6']
+[2019-10-11 12:42:07,089] [insert_data.py] [WARNING] [__main__] - Empty cell in row ['Eachelle Alexsandrovich', '', '27170.7']. Excluding it.
+[2019-10-11 12:42:07,089] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Esmeralda Jindrak', 'Product Management', '24921.07']
+[2019-10-11 12:42:07,089] [insert_data.py] [WARNING] [__main__] - Empty cell in row ['', 'Marketing', '46833.99']. Excluding it.
+[2019-10-11 12:42:07,089] [insert_data.py] [WARNING] [__main__] - Empty cell in row ['', 'Research and Development', '30231.58']. Excluding it.
+[2019-10-11 12:42:07,089] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Nu\xc3\xb3', 'Marketing', '39939.05']
+[2019-10-11 12:42:07,089] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Oph\xc3\xa9lie', 'Marketing', '85259.42']
+[2019-10-11 12:42:07,089] [insert_data.py] [INFO] [__main__] - Will be inserting row ['C\xc3\xa9line', 'Accounting', '53034.42']
+[2019-10-11 12:42:07,090] [insert_data.py] [INFO] [__main__] - Will be inserting row ['L\xc3\xa9ane', 'Legal', '1259.6']
+[2019-10-11 12:42:07,090] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Desir\xc3\xa9e', 'Research and Development', '52388.89']
+[2019-10-11 12:42:07,090] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Jos\xc3\xa9e', 'Business Development', '26624.49']
+[2019-10-11 12:42:07,090] [insert_data.py] [INFO] [__main__] - Will be inserting row ['M\xc3\xa9lia', 'Product Management', '81170.13']
+[2019-10-11 12:42:07,090] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Laur\xc3\xa9lie', 'Research and Development', '35252.06']
+[2019-10-11 12:42:07,090] [insert_data.py] [INFO] [__main__] - Will be inserting row ['R\xc3\xa1o', 'Accounting', '71415.77']
+[2019-10-11 12:42:07,090] [insert_data.py] [INFO] [__main__] - Will be inserting row ['N\xc3\xa9h\xc3\xa9mie', 'Business Development', '18617.0']
+[2019-10-11 12:42:07,090] [insert_data.py] [INFO] [__main__] - Will be inserting row ["Ju'an", 'Marketing', '72343.29']
+[2019-10-11 12:42:07,090] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Robert-deSylivia', ' Sales', ' 99898.009']
+[2019-10-11 12:42:07,090] [insert_data.py] [INFO] [__main__] - Will be inserting 17 data rows
+[2019-10-11 12:42:07,091] [insert_data.py] [WARNING] [__main__] - Skipping 5 data rows. They have empty values
+[2019-10-11 12:42:07,091] [insert_data.py] [INFO] [__main__] - Creating thread 1 to insert 8 rows 
+[2019-10-11 12:42:07,091] [insert_data.py] [INFO] [__main__] - Creating thread 2 to insert 8 rows 
+[2019-10-11 12:42:12,097] [insert_data.py] [INFO] [__main__] - Exiting with exit code 0
+create_table.py:INFO:__main__:Connection established
+create_table.py:INFO:__main__:Using database testdb Table emp
+create_table.py:INFO:__main__:Created table emp
+create_table.py:INFO:__main__:Create statement is - 
+
+    CREATE TABLE IF NOT EXISTS emp(
+    id INT(5) NOT NULL AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    department VARCHAR(255) NOT NULL,
+    salary FLOAT(9,2) NOT NULL,
+    PRIMARY KEY(id));
+
+    
+create_table.py:INFO:__main__:Exiting with exit code-0
+insert_data.py:INFO:__main__:Connection established
+insert_data.py:INFO:__main__:Using database testdb Table emp
+insert_data.py:INFO:__main__:Will be importing data from path /home/abisekm/Documents/Shell/shell1/datafile.txt
+insert_data.py:WARNING:__main__:Empty cell in row ['', 'Human Resources', '41354.87']. Excluding it.
+insert_data.py:INFO:__main__:Will be inserting row ['Sal Harlick', 'Accounting', '64077.37']
+insert_data.py:INFO:__main__:Will be inserting row ['La verne Iorns', 'Human Resources', '64602.23']
+insert_data.py:INFO:__main__:Will be inserting row ['Tedmund Burgher', 'Human Resources', '23151.87']
+insert_data.py:WARNING:__main__:Empty cell in row ['Zaccaria Colleford', 'Accounting', '']. Excluding it.
+insert_data.py:INFO:__main__:Will be inserting row ['Eleni Clapston', 'Product Management', '42282.6']
+insert_data.py:WARNING:__main__:Empty cell in row ['Eachelle Alexsandrovich', '', '27170.7']. Excluding it.
+insert_data.py:INFO:__main__:Will be inserting row ['Esmeralda Jindrak', 'Product Management', '24921.07']
+insert_data.py:WARNING:__main__:Empty cell in row ['', 'Marketing', '46833.99']. Excluding it.
+insert_data.py:WARNING:__main__:Empty cell in row ['', 'Research and Development', '30231.58']. Excluding it.
+insert_data.py:INFO:__main__:Will be inserting row ['Nu\xc3\xb3', 'Marketing', '39939.05']
+insert_data.py:INFO:__main__:Will be inserting row ['Oph\xc3\xa9lie', 'Marketing', '85259.42']
+insert_data.py:INFO:__main__:Will be inserting row ['C\xc3\xa9line', 'Accounting', '53034.42']
+insert_data.py:INFO:__main__:Will be inserting row ['L\xc3\xa9ane', 'Legal', '1259.6']
+insert_data.py:INFO:__main__:Will be inserting row ['Desir\xc3\xa9e', 'Research and Development', '52388.89']
+insert_data.py:INFO:__main__:Will be inserting row ['Jos\xc3\xa9e', 'Business Development', '26624.49']
+insert_data.py:INFO:__main__:Will be inserting row ['M\xc3\xa9lia', 'Product Management', '81170.13']
+insert_data.py:INFO:__main__:Will be inserting row ['Laur\xc3\xa9lie', 'Research and Development', '35252.06']
+insert_data.py:INFO:__main__:Will be inserting row ['R\xc3\xa1o', 'Accounting', '71415.77']
+insert_data.py:INFO:__main__:Will be inserting row ['N\xc3\xa9h\xc3\xa9mie', 'Business Development', '18617.0']
+insert_data.py:INFO:__main__:Will be inserting row ["Ju'an", 'Marketing', '72343.29']
+insert_data.py:INFO:__main__:Will be inserting row ['Robert-deSylivia', ' Sales', ' 99898.009']
+insert_data.py:INFO:__main__:Will be inserting 17 data rows
+insert_data.py:WARNING:__main__:Skipping 5 data rows. They have empty values
+insert_data.py:INFO:__main__:Inserted 17 rows in db
+insert_data.py:INFO:__main__:Exiting with exit code 0
+[2019-10-11 12:52:51,624] [insert_data.py] [INFO] [__main__] - Connection established
+[2019-10-11 12:52:51,624] [insert_data.py] [INFO] [__main__] - Using database testdb Table emp
+[2019-10-11 12:52:51,624] [insert_data.py] [INFO] [__main__] - Will be importing data from path /home/abisekm/Documents/Shell/shell1/datafile.txt
+[2019-10-11 12:52:51,624] [insert_data.py] [WARNING] [__main__] - Empty cell in row ['', 'Human Resources', '41354.87']. Excluding it.
+[2019-10-11 12:52:51,625] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Sal Harlick', 'Accounting', '64077.37']
+[2019-10-11 12:52:51,625] [insert_data.py] [INFO] [__main__] - Will be inserting row ['La verne Iorns', 'Human Resources', '64602.23']
+[2019-10-11 12:52:51,625] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Tedmund Burgher', 'Human Resources', '23151.87']
+[2019-10-11 12:52:51,625] [insert_data.py] [WARNING] [__main__] - Empty cell in row ['Zaccaria Colleford', 'Accounting', '']. Excluding it.
+[2019-10-11 12:52:51,625] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Eleni Clapston', 'Product Management', '42282.6']
+[2019-10-11 12:52:51,625] [insert_data.py] [WARNING] [__main__] - Empty cell in row ['Eachelle Alexsandrovich', '', '27170.7']. Excluding it.
+[2019-10-11 12:52:51,626] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Esmeralda Jindrak', 'Product Management', '24921.07']
+[2019-10-11 12:52:51,626] [insert_data.py] [WARNING] [__main__] - Empty cell in row ['', 'Marketing', '46833.99']. Excluding it.
+[2019-10-11 12:52:51,626] [insert_data.py] [WARNING] [__main__] - Empty cell in row ['', 'Research and Development', '30231.58']. Excluding it.
+[2019-10-11 12:52:51,626] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Nu\xc3\xb3', 'Marketing', '39939.05']
+[2019-10-11 12:52:51,626] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Oph\xc3\xa9lie', 'Marketing', '85259.42']
+[2019-10-11 12:52:51,626] [insert_data.py] [INFO] [__main__] - Will be inserting row ['C\xc3\xa9line', 'Accounting', '53034.42']
+[2019-10-11 12:52:51,626] [insert_data.py] [INFO] [__main__] - Will be inserting row ['L\xc3\xa9ane', 'Legal', '1259.6']
+[2019-10-11 12:52:51,627] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Desir\xc3\xa9e', 'Research and Development', '52388.89']
+[2019-10-11 12:52:51,627] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Jos\xc3\xa9e', 'Business Development', '26624.49']
+[2019-10-11 12:52:51,627] [insert_data.py] [INFO] [__main__] - Will be inserting row ['M\xc3\xa9lia', 'Product Management', '81170.13']
+[2019-10-11 12:52:51,627] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Laur\xc3\xa9lie', 'Research and Development', '35252.06']
+[2019-10-11 12:52:51,627] [insert_data.py] [INFO] [__main__] - Will be inserting row ['R\xc3\xa1o', 'Accounting', '71415.77']
+[2019-10-11 12:52:51,627] [insert_data.py] [INFO] [__main__] - Will be inserting row ['N\xc3\xa9h\xc3\xa9mie', 'Business Development', '18617.0']
+[2019-10-11 12:52:51,627] [insert_data.py] [INFO] [__main__] - Will be inserting row ["Ju'an", 'Marketing', '72343.29']
+[2019-10-11 12:52:51,627] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Robert-deSylivia', ' Sales', ' 99898.009']
+[2019-10-11 12:52:51,628] [insert_data.py] [INFO] [__main__] - Will be inserting 17 data rows
+[2019-10-11 12:52:51,628] [insert_data.py] [WARNING] [__main__] - Skipping 5 data rows. They have empty values
+[2019-10-11 12:52:51,628] [insert_data.py] [ERROR] [__main__] - MySQL Error: (1146, u"Table 'testdb.emp' doesn't exist")
+Traceback (most recent call last):
+  File "insert_data.py", line 102, in <module>
+    insert_count += insert_data(conn, entry)
+  File "insert_data.py", line 61, in insert_data
+    return cur.execute(insert_stmt)
+  File "/home/abisekm/.local/lib/python2.7/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/abisekm/.local/lib/python2.7/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/abisekm/.local/lib/python2.7/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/abisekm/.local/lib/python2.7/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/abisekm/.local/lib/python2.7/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/abisekm/.local/lib/python2.7/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/abisekm/.local/lib/python2.7/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/abisekm/.local/lib/python2.7/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+ProgrammingError: (1146, u"Table 'testdb.emp' doesn't exist")
+[2019-10-11 12:52:51,630] [insert_data.py] [INFO] [__main__] - Exiting with exit code 1
+create_table.py:INFO:__main__:Connection established
+create_table.py:INFO:__main__:Using database testdb Table emp
+create_table.py:INFO:__main__:Created table emp
+create_table.py:INFO:__main__:Create statement is - 
+
+    CREATE TABLE IF NOT EXISTS emp(
+    id INT(5) NOT NULL AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    department VARCHAR(255) NOT NULL,
+    salary FLOAT(9,2) NOT NULL,
+    PRIMARY KEY(id));
+
+    
+create_table.py:INFO:__main__:Exiting with exit code-0
+[2019-10-11 12:53:41,524] [insert_data.py] [INFO] [__main__] - Connection established
+[2019-10-11 12:53:41,524] [insert_data.py] [INFO] [__main__] - Using database testdb Table emp
+[2019-10-11 12:53:41,524] [insert_data.py] [INFO] [__main__] - Will be importing data from path /home/abisekm/Documents/Shell/shell1/datafile.txt
+[2019-10-11 12:53:41,524] [insert_data.py] [WARNING] [__main__] - Empty cell in row ['', 'Human Resources', '41354.87']. Excluding it.
+[2019-10-11 12:53:41,524] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Sal Harlick', 'Accounting', '64077.37']
+[2019-10-11 12:53:41,524] [insert_data.py] [INFO] [__main__] - Will be inserting row ['La verne Iorns', 'Human Resources', '64602.23']
+[2019-10-11 12:53:41,524] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Tedmund Burgher', 'Human Resources', '23151.87']
+[2019-10-11 12:53:41,525] [insert_data.py] [WARNING] [__main__] - Empty cell in row ['Zaccaria Colleford', 'Accounting', '']. Excluding it.
+[2019-10-11 12:53:41,525] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Eleni Clapston', 'Product Management', '42282.6']
+[2019-10-11 12:53:41,525] [insert_data.py] [WARNING] [__main__] - Empty cell in row ['Eachelle Alexsandrovich', '', '27170.7']. Excluding it.
+[2019-10-11 12:53:41,525] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Esmeralda Jindrak', 'Product Management', '24921.07']
+[2019-10-11 12:53:41,525] [insert_data.py] [WARNING] [__main__] - Empty cell in row ['', 'Marketing', '46833.99']. Excluding it.
+[2019-10-11 12:53:41,525] [insert_data.py] [WARNING] [__main__] - Empty cell in row ['', 'Research and Development', '30231.58']. Excluding it.
+[2019-10-11 12:53:41,525] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Nu\xc3\xb3', 'Marketing', '39939.05']
+[2019-10-11 12:53:41,525] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Oph\xc3\xa9lie', 'Marketing', '85259.42']
+[2019-10-11 12:53:41,526] [insert_data.py] [INFO] [__main__] - Will be inserting row ['C\xc3\xa9line', 'Accounting', '53034.42']
+[2019-10-11 12:53:41,526] [insert_data.py] [INFO] [__main__] - Will be inserting row ['L\xc3\xa9ane', 'Legal', '1259.6']
+[2019-10-11 12:53:41,526] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Desir\xc3\xa9e', 'Research and Development', '52388.89']
+[2019-10-11 12:53:41,526] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Jos\xc3\xa9e', 'Business Development', '26624.49']
+[2019-10-11 12:53:41,526] [insert_data.py] [INFO] [__main__] - Will be inserting row ['M\xc3\xa9lia', 'Product Management', '81170.13']
+[2019-10-11 12:53:41,526] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Laur\xc3\xa9lie', 'Research and Development', '35252.06']
+[2019-10-11 12:53:41,526] [insert_data.py] [INFO] [__main__] - Will be inserting row ['R\xc3\xa1o', 'Accounting', '71415.77']
+[2019-10-11 12:53:41,527] [insert_data.py] [INFO] [__main__] - Will be inserting row ['N\xc3\xa9h\xc3\xa9mie', 'Business Development', '18617.0']
+[2019-10-11 12:53:41,527] [insert_data.py] [INFO] [__main__] - Will be inserting row ["Ju'an", 'Marketing', '72343.29']
+[2019-10-11 12:53:41,527] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Robert-deSylivia', ' Sales', ' 99898.009']
+[2019-10-11 12:53:41,527] [insert_data.py] [INFO] [__main__] - Will be inserting 17 data rows
+[2019-10-11 12:53:41,527] [insert_data.py] [WARNING] [__main__] - Skipping 5 data rows. They have empty values
+[2019-10-11 12:53:41,532] [insert_data.py] [INFO] [__main__] - Inserted 17 rows in db
+[2019-10-11 12:53:41,685] [insert_data.py] [INFO] [__main__] - Exiting with exit code 0
+[2019-10-11 12:54:57,485] [insert_data_threaded.py] [INFO] [__main__] - Connection established
+[2019-10-11 12:54:57,485] [insert_data_threaded.py] [INFO] [__main__] - Using database testdb Table emp
+[2019-10-11 12:54:57,485] [insert_data_threaded.py] [INFO] [__main__] - Will be importing data from path /home/abisekm/Documents/Shell/shell1/datafile.txt
+[2019-10-11 12:54:57,485] [insert_data_threaded.py] [WARNING] [__main__] - Empty cell in row ['', 'Human Resources', '41354.87']. Excluding it.
+[2019-10-11 12:54:57,485] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Sal Harlick', 'Accounting', '64077.37']
+[2019-10-11 12:54:57,486] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['La verne Iorns', 'Human Resources', '64602.23']
+[2019-10-11 12:54:57,486] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Tedmund Burgher', 'Human Resources', '23151.87']
+[2019-10-11 12:54:57,486] [insert_data_threaded.py] [WARNING] [__main__] - Empty cell in row ['Zaccaria Colleford', 'Accounting', '']. Excluding it.
+[2019-10-11 12:54:57,486] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Eleni Clapston', 'Product Management', '42282.6']
+[2019-10-11 12:54:57,486] [insert_data_threaded.py] [WARNING] [__main__] - Empty cell in row ['Eachelle Alexsandrovich', '', '27170.7']. Excluding it.
+[2019-10-11 12:54:57,486] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Esmeralda Jindrak', 'Product Management', '24921.07']
+[2019-10-11 12:54:57,486] [insert_data_threaded.py] [WARNING] [__main__] - Empty cell in row ['', 'Marketing', '46833.99']. Excluding it.
+[2019-10-11 12:54:57,486] [insert_data_threaded.py] [WARNING] [__main__] - Empty cell in row ['', 'Research and Development', '30231.58']. Excluding it.
+[2019-10-11 12:54:57,486] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Nu\xc3\xb3', 'Marketing', '39939.05']
+[2019-10-11 12:54:57,486] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Oph\xc3\xa9lie', 'Marketing', '85259.42']
+[2019-10-11 12:54:57,486] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['C\xc3\xa9line', 'Accounting', '53034.42']
+[2019-10-11 12:54:57,487] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['L\xc3\xa9ane', 'Legal', '1259.6']
+[2019-10-11 12:54:57,487] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Desir\xc3\xa9e', 'Research and Development', '52388.89']
+[2019-10-11 12:54:57,487] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Jos\xc3\xa9e', 'Business Development', '26624.49']
+[2019-10-11 12:54:57,487] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['M\xc3\xa9lia', 'Product Management', '81170.13']
+[2019-10-11 12:54:57,487] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Laur\xc3\xa9lie', 'Research and Development', '35252.06']
+[2019-10-11 12:54:57,487] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['R\xc3\xa1o', 'Accounting', '71415.77']
+[2019-10-11 12:54:57,487] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['N\xc3\xa9h\xc3\xa9mie', 'Business Development', '18617.0']
+[2019-10-11 12:54:57,487] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ["Ju'an", 'Marketing', '72343.29']
+[2019-10-11 12:54:57,487] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Robert-deSylivia', ' Sales', ' 99898.009']
+[2019-10-11 12:54:57,487] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting 17 data rows
+[2019-10-11 12:54:57,487] [insert_data_threaded.py] [WARNING] [__main__] - Skipping 5 data rows. They have empty values
+[2019-10-11 12:54:57,487] [insert_data_threaded.py] [INFO] [__main__] - Creating thread 1 to insert 8 rows 
+[2019-10-11 12:54:57,488] [insert_data_threaded.py] [INFO] [__main__] - Creating thread 2 to insert 8 rows 
+[2019-10-11 12:54:57,488] [insert_data_threaded.py] [INFO] [__main__] - Acquiring lock over connection
+[2019-10-11 12:54:57,488] [insert_data_threaded.py] [INFO] [__main__] - Acquiring lock over connection
+[2019-10-11 12:55:02,494] [insert_data_threaded.py] [INFO] [__main__] - Exiting with exit code 0
+[2019-10-11 12:58:36,285] [insert_data_threaded.py] [INFO] [__main__] - Connection established
+[2019-10-11 12:58:36,285] [insert_data_threaded.py] [INFO] [__main__] - Using database testdb Table emp
+[2019-10-11 12:58:36,285] [insert_data_threaded.py] [INFO] [__main__] - Will be importing data from path /home/abisekm/Documents/Shell/shell1/datafile.txt
+[2019-10-11 12:58:36,286] [insert_data_threaded.py] [WARNING] [__main__] - Empty cell in row ['', 'Human Resources', '41354.87']. Excluding it.
+[2019-10-11 12:58:36,286] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Sal Harlick', 'Accounting', '64077.37']
+[2019-10-11 12:58:36,286] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['La verne Iorns', 'Human Resources', '64602.23']
+[2019-10-11 12:58:36,286] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Tedmund Burgher', 'Human Resources', '23151.87']
+[2019-10-11 12:58:36,286] [insert_data_threaded.py] [WARNING] [__main__] - Empty cell in row ['Zaccaria Colleford', 'Accounting', '']. Excluding it.
+[2019-10-11 12:58:36,286] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Eleni Clapston', 'Product Management', '42282.6']
+[2019-10-11 12:58:36,286] [insert_data_threaded.py] [WARNING] [__main__] - Empty cell in row ['Eachelle Alexsandrovich', '', '27170.7']. Excluding it.
+[2019-10-11 12:58:36,286] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Esmeralda Jindrak', 'Product Management', '24921.07']
+[2019-10-11 12:58:36,287] [insert_data_threaded.py] [WARNING] [__main__] - Empty cell in row ['', 'Marketing', '46833.99']. Excluding it.
+[2019-10-11 12:58:36,287] [insert_data_threaded.py] [WARNING] [__main__] - Empty cell in row ['', 'Research and Development', '30231.58']. Excluding it.
+[2019-10-11 12:58:36,287] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Nu\xc3\xb3', 'Marketing', '39939.05']
+[2019-10-11 12:58:36,287] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Oph\xc3\xa9lie', 'Marketing', '85259.42']
+[2019-10-11 12:58:36,287] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['C\xc3\xa9line', 'Accounting', '53034.42']
+[2019-10-11 12:58:36,287] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['L\xc3\xa9ane', 'Legal', '1259.6']
+[2019-10-11 12:58:36,287] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Desir\xc3\xa9e', 'Research and Development', '52388.89']
+[2019-10-11 12:58:36,287] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Jos\xc3\xa9e', 'Business Development', '26624.49']
+[2019-10-11 12:58:36,287] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['M\xc3\xa9lia', 'Product Management', '81170.13']
+[2019-10-11 12:58:36,287] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Laur\xc3\xa9lie', 'Research and Development', '35252.06']
+[2019-10-11 12:58:36,287] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['R\xc3\xa1o', 'Accounting', '71415.77']
+[2019-10-11 12:58:36,287] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['N\xc3\xa9h\xc3\xa9mie', 'Business Development', '18617.0']
+[2019-10-11 12:58:36,287] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ["Ju'an", 'Marketing', '72343.29']
+[2019-10-11 12:58:36,288] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Robert-deSylivia', ' Sales', ' 99898.009']
+[2019-10-11 12:58:36,288] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting 17 data rows
+[2019-10-11 12:58:36,288] [insert_data_threaded.py] [WARNING] [__main__] - Skipping 5 data rows. They have empty values
+[2019-10-11 12:58:36,288] [insert_data_threaded.py] [INFO] [__main__] - Creating thread 1 to insert 8 rows 
+[2019-10-11 12:58:36,288] [insert_data_threaded.py] [INFO] [__main__] - Creating thread 2 to insert 8 rows 
+[2019-10-11 12:58:36,288] [insert_data_threaded.py] [INFO] [__main__] - Acquiring lock over connection
+[2019-10-11 12:58:36,288] [insert_data_threaded.py] [INFO] [__main__] - Acquiring lock over connection
+[2019-10-11 12:58:41,291] [insert_data_threaded.py] [INFO] [__main__] - Exiting with exit code 0
+create_table.py:INFO:__main__:Connection established
+create_table.py:INFO:__main__:Using database testdb Table emp
+create_table.py:INFO:__main__:Created table emp
+create_table.py:INFO:__main__:Create statement is - 
+
+    CREATE TABLE IF NOT EXISTS emp(
+    id INT(5) NOT NULL AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    department VARCHAR(255) NOT NULL,
+    salary FLOAT(9,2) NOT NULL,
+    PRIMARY KEY(id));
+
+    
+create_table.py:INFO:__main__:Exiting with exit code-0
+[2019-10-11 13:28:51,465] [insert_data.py] [INFO] [__main__] - Connection established
+[2019-10-11 13:28:51,466] [insert_data.py] [INFO] [__main__] - Using database testdb Table emp
+[2019-10-11 13:28:51,466] [insert_data.py] [INFO] [__main__] - Will be importing data from path /home/abisekm/Documents/Shell/shell1/datafile.txt
+[2019-10-11 13:28:51,466] [insert_data.py] [WARNING] [__main__] - Empty cell in row ['', 'Human Resources', '41354.87']. Excluding it.
+[2019-10-11 13:28:51,466] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Sal Harlick', 'Accounting', '64077.37']
+[2019-10-11 13:28:51,466] [insert_data.py] [INFO] [__main__] - Will be inserting row ['La verne Iorns', 'Human Resources', '64602.23']
+[2019-10-11 13:28:51,466] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Tedmund Burgher', 'Human Resources', '23151.87']
+[2019-10-11 13:28:51,466] [insert_data.py] [WARNING] [__main__] - Empty cell in row ['Zaccaria Colleford', 'Accounting', '']. Excluding it.
+[2019-10-11 13:28:51,466] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Eleni Clapston', 'Product Management', '42282.6']
+[2019-10-11 13:28:51,466] [insert_data.py] [WARNING] [__main__] - Empty cell in row ['Eachelle Alexsandrovich', '', '27170.7']. Excluding it.
+[2019-10-11 13:28:51,466] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Esmeralda Jindrak', 'Product Management', '24921.07']
+[2019-10-11 13:28:51,466] [insert_data.py] [WARNING] [__main__] - Empty cell in row ['', 'Marketing', '46833.99']. Excluding it.
+[2019-10-11 13:28:51,467] [insert_data.py] [WARNING] [__main__] - Empty cell in row ['', 'Research and Development', '30231.58']. Excluding it.
+[2019-10-11 13:28:51,467] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Nu\xc3\xb3', 'Marketing', '39939.05']
+[2019-10-11 13:28:51,467] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Oph\xc3\xa9lie', 'Marketing', '85259.42']
+[2019-10-11 13:28:51,467] [insert_data.py] [INFO] [__main__] - Will be inserting row ['C\xc3\xa9line', 'Accounting', '53034.42']
+[2019-10-11 13:28:51,467] [insert_data.py] [INFO] [__main__] - Will be inserting row ['L\xc3\xa9ane', 'Legal', '1259.6']
+[2019-10-11 13:28:51,467] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Desir\xc3\xa9e', 'Research and Development', '52388.89']
+[2019-10-11 13:28:51,467] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Jos\xc3\xa9e', 'Business Development', '26624.49']
+[2019-10-11 13:28:51,467] [insert_data.py] [INFO] [__main__] - Will be inserting row ['M\xc3\xa9lia', 'Product Management', '81170.13']
+[2019-10-11 13:28:51,467] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Laur\xc3\xa9lie', 'Research and Development', '35252.06']
+[2019-10-11 13:28:51,467] [insert_data.py] [INFO] [__main__] - Will be inserting row ['R\xc3\xa1o', 'Accounting', '71415.77']
+[2019-10-11 13:28:51,467] [insert_data.py] [INFO] [__main__] - Will be inserting row ['N\xc3\xa9h\xc3\xa9mie', 'Business Development', '18617.0']
+[2019-10-11 13:28:51,468] [insert_data.py] [INFO] [__main__] - Will be inserting row ["Ju'an", 'Marketing', '72343.29']
+[2019-10-11 13:28:51,468] [insert_data.py] [INFO] [__main__] - Will be inserting row ['Robert-deSylivia', ' Sales', ' 99898.009']
+[2019-10-11 13:28:51,468] [insert_data.py] [INFO] [__main__] - Will be inserting 17 data rows
+[2019-10-11 13:28:51,468] [insert_data.py] [WARNING] [__main__] - Skipping 5 data rows. They have empty values
+[2019-10-11 13:28:51,471] [insert_data.py] [INFO] [__main__] - Inserted 17 rows in db
+[2019-10-11 13:28:51,568] [insert_data.py] [INFO] [__main__] - Exiting with exit code 0
+[2019-10-11 13:29:11,647] [insert_data_threaded.py] [INFO] [__main__] - Connection established
+[2019-10-11 13:29:11,648] [insert_data_threaded.py] [INFO] [__main__] - Using database testdb Table emp
+[2019-10-11 13:29:11,648] [insert_data_threaded.py] [INFO] [__main__] - Will be importing data from path /home/abisekm/Documents/Shell/shell1/datafile.txt
+[2019-10-11 13:29:11,648] [insert_data_threaded.py] [WARNING] [__main__] - Empty cell in row ['', 'Human Resources', '41354.87']. Excluding it.
+[2019-10-11 13:29:11,648] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Sal Harlick', 'Accounting', '64077.37']
+[2019-10-11 13:29:11,648] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['La verne Iorns', 'Human Resources', '64602.23']
+[2019-10-11 13:29:11,648] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Tedmund Burgher', 'Human Resources', '23151.87']
+[2019-10-11 13:29:11,648] [insert_data_threaded.py] [WARNING] [__main__] - Empty cell in row ['Zaccaria Colleford', 'Accounting', '']. Excluding it.
+[2019-10-11 13:29:11,648] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Eleni Clapston', 'Product Management', '42282.6']
+[2019-10-11 13:29:11,649] [insert_data_threaded.py] [WARNING] [__main__] - Empty cell in row ['Eachelle Alexsandrovich', '', '27170.7']. Excluding it.
+[2019-10-11 13:29:11,649] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Esmeralda Jindrak', 'Product Management', '24921.07']
+[2019-10-11 13:29:11,649] [insert_data_threaded.py] [WARNING] [__main__] - Empty cell in row ['', 'Marketing', '46833.99']. Excluding it.
+[2019-10-11 13:29:11,649] [insert_data_threaded.py] [WARNING] [__main__] - Empty cell in row ['', 'Research and Development', '30231.58']. Excluding it.
+[2019-10-11 13:29:11,649] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Nu\xc3\xb3', 'Marketing', '39939.05']
+[2019-10-11 13:29:11,649] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Oph\xc3\xa9lie', 'Marketing', '85259.42']
+[2019-10-11 13:29:11,649] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['C\xc3\xa9line', 'Accounting', '53034.42']
+[2019-10-11 13:29:11,649] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['L\xc3\xa9ane', 'Legal', '1259.6']
+[2019-10-11 13:29:11,649] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Desir\xc3\xa9e', 'Research and Development', '52388.89']
+[2019-10-11 13:29:11,649] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Jos\xc3\xa9e', 'Business Development', '26624.49']
+[2019-10-11 13:29:11,649] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['M\xc3\xa9lia', 'Product Management', '81170.13']
+[2019-10-11 13:29:11,649] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Laur\xc3\xa9lie', 'Research and Development', '35252.06']
+[2019-10-11 13:29:11,649] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['R\xc3\xa1o', 'Accounting', '71415.77']
+[2019-10-11 13:29:11,650] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['N\xc3\xa9h\xc3\xa9mie', 'Business Development', '18617.0']
+[2019-10-11 13:29:11,650] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ["Ju'an", 'Marketing', '72343.29']
+[2019-10-11 13:29:11,650] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Robert-deSylivia', ' Sales', ' 99898.009']
+[2019-10-11 13:29:11,650] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting 17 data rows
+[2019-10-11 13:29:11,650] [insert_data_threaded.py] [WARNING] [__main__] - Skipping 5 data rows. They have empty values
+[2019-10-11 13:29:11,650] [insert_data_threaded.py] [INFO] [__main__] - Creating thread 1 to insert 8 rows 
+[2019-10-11 13:29:11,650] [insert_data_threaded.py] [INFO] [__main__] - Creating thread 2 to insert 8 rows 
+[2019-10-11 13:29:11,650] [insert_data_threaded.py] [INFO] [__main__] - Acquiring lock over connection
+[2019-10-11 13:29:11,651] [insert_data_threaded.py] [INFO] [__main__] - Acquiring lock over connection
+[2019-10-11 13:29:16,657] [insert_data_threaded.py] [INFO] [__main__] - Exiting with exit code 0
+[2019-10-11 13:29:56,991] [insert_data_threaded.py] [INFO] [__main__] - Connection established
+[2019-10-11 13:29:56,991] [insert_data_threaded.py] [INFO] [__main__] - Using database testdb Table emp
+[2019-10-11 13:29:56,991] [insert_data_threaded.py] [INFO] [__main__] - Will be importing data from path /home/abisekm/Documents/Shell/shell1/datafile.txt
+[2019-10-11 13:29:56,991] [insert_data_threaded.py] [WARNING] [__main__] - Empty cell in row ['', 'Human Resources', '41354.87']. Excluding it.
+[2019-10-11 13:29:56,991] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Sal Harlick', 'Accounting', '64077.37']
+[2019-10-11 13:29:56,992] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['La verne Iorns', 'Human Resources', '64602.23']
+[2019-10-11 13:29:56,992] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Tedmund Burgher', 'Human Resources', '23151.87']
+[2019-10-11 13:29:56,992] [insert_data_threaded.py] [WARNING] [__main__] - Empty cell in row ['Zaccaria Colleford', 'Accounting', '']. Excluding it.
+[2019-10-11 13:29:56,992] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Eleni Clapston', 'Product Management', '42282.6']
+[2019-10-11 13:29:56,992] [insert_data_threaded.py] [WARNING] [__main__] - Empty cell in row ['Eachelle Alexsandrovich', '', '27170.7']. Excluding it.
+[2019-10-11 13:29:56,992] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Esmeralda Jindrak', 'Product Management', '24921.07']
+[2019-10-11 13:29:56,992] [insert_data_threaded.py] [WARNING] [__main__] - Empty cell in row ['', 'Marketing', '46833.99']. Excluding it.
+[2019-10-11 13:29:56,992] [insert_data_threaded.py] [WARNING] [__main__] - Empty cell in row ['', 'Research and Development', '30231.58']. Excluding it.
+[2019-10-11 13:29:56,992] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Nu\xc3\xb3', 'Marketing', '39939.05']
+[2019-10-11 13:29:56,992] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Oph\xc3\xa9lie', 'Marketing', '85259.42']
+[2019-10-11 13:29:56,992] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['C\xc3\xa9line', 'Accounting', '53034.42']
+[2019-10-11 13:29:56,993] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['L\xc3\xa9ane', 'Legal', '1259.6']
+[2019-10-11 13:29:56,993] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Desir\xc3\xa9e', 'Research and Development', '52388.89']
+[2019-10-11 13:29:56,993] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Jos\xc3\xa9e', 'Business Development', '26624.49']
+[2019-10-11 13:29:56,993] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['M\xc3\xa9lia', 'Product Management', '81170.13']
+[2019-10-11 13:29:56,993] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Laur\xc3\xa9lie', 'Research and Development', '35252.06']
+[2019-10-11 13:29:56,993] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['R\xc3\xa1o', 'Accounting', '71415.77']
+[2019-10-11 13:29:56,993] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['N\xc3\xa9h\xc3\xa9mie', 'Business Development', '18617.0']
+[2019-10-11 13:29:56,993] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ["Ju'an", 'Marketing', '72343.29']
+[2019-10-11 13:29:56,993] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Robert-deSylivia', ' Sales', ' 99898.009']
+[2019-10-11 13:29:56,993] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting 17 data rows
+[2019-10-11 13:29:56,993] [insert_data_threaded.py] [WARNING] [__main__] - Skipping 5 data rows. They have empty values
+[2019-10-11 13:29:56,993] [insert_data_threaded.py] [INFO] [__main__] - Creating thread 1 to insert 8 rows 
+[2019-10-11 13:29:56,993] [insert_data_threaded.py] [INFO] [__main__] - Creating thread 2 to insert 8 rows 
+[2019-10-11 13:29:56,993] [insert_data_threaded.py] [INFO] [__main__] - Acquiring lock over connection
+[2019-10-11 13:29:56,994] [insert_data_threaded.py] [INFO] [__main__] - Acquiring lock over connection
+[2019-10-11 13:30:02,000] [insert_data_threaded.py] [INFO] [__main__] - Exiting with exit code 0
+[2019-10-11 13:30:56,505] [insert_data_threaded.py] [INFO] [__main__] - Connection established
+[2019-10-11 13:30:56,505] [insert_data_threaded.py] [INFO] [__main__] - Using database testdb Table emp
+[2019-10-11 13:30:56,505] [insert_data_threaded.py] [INFO] [__main__] - Will be importing data from path /home/abisekm/Documents/Shell/shell1/datafile.txt
+[2019-10-11 13:30:56,505] [insert_data_threaded.py] [WARNING] [__main__] - Empty cell in row ['', 'Human Resources', '41354.87']. Excluding it.
+[2019-10-11 13:30:56,505] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Sal Harlick', 'Accounting', '64077.37']
+[2019-10-11 13:30:56,506] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['La verne Iorns', 'Human Resources', '64602.23']
+[2019-10-11 13:30:56,506] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Tedmund Burgher', 'Human Resources', '23151.87']
+[2019-10-11 13:30:56,506] [insert_data_threaded.py] [WARNING] [__main__] - Empty cell in row ['Zaccaria Colleford', 'Accounting', '']. Excluding it.
+[2019-10-11 13:30:56,506] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Eleni Clapston', 'Product Management', '42282.6']
+[2019-10-11 13:30:56,506] [insert_data_threaded.py] [WARNING] [__main__] - Empty cell in row ['Eachelle Alexsandrovich', '', '27170.7']. Excluding it.
+[2019-10-11 13:30:56,506] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Esmeralda Jindrak', 'Product Management', '24921.07']
+[2019-10-11 13:30:56,506] [insert_data_threaded.py] [WARNING] [__main__] - Empty cell in row ['', 'Marketing', '46833.99']. Excluding it.
+[2019-10-11 13:30:56,506] [insert_data_threaded.py] [WARNING] [__main__] - Empty cell in row ['', 'Research and Development', '30231.58']. Excluding it.
+[2019-10-11 13:30:56,506] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Nu\xc3\xb3', 'Marketing', '39939.05']
+[2019-10-11 13:30:56,506] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Oph\xc3\xa9lie', 'Marketing', '85259.42']
+[2019-10-11 13:30:56,506] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['C\xc3\xa9line', 'Accounting', '53034.42']
+[2019-10-11 13:30:56,506] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['L\xc3\xa9ane', 'Legal', '1259.6']
+[2019-10-11 13:30:56,507] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Desir\xc3\xa9e', 'Research and Development', '52388.89']
+[2019-10-11 13:30:56,507] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Jos\xc3\xa9e', 'Business Development', '26624.49']
+[2019-10-11 13:30:56,507] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['M\xc3\xa9lia', 'Product Management', '81170.13']
+[2019-10-11 13:30:56,507] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Laur\xc3\xa9lie', 'Research and Development', '35252.06']
+[2019-10-11 13:30:56,507] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['R\xc3\xa1o', 'Accounting', '71415.77']
+[2019-10-11 13:30:56,507] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['N\xc3\xa9h\xc3\xa9mie', 'Business Development', '18617.0']
+[2019-10-11 13:30:56,507] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ["Ju'an", 'Marketing', '72343.29']
+[2019-10-11 13:30:56,507] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Robert-deSylivia', ' Sales', ' 99898.009']
+[2019-10-11 13:30:56,507] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting 17 data rows
+[2019-10-11 13:30:56,507] [insert_data_threaded.py] [WARNING] [__main__] - Skipping 5 data rows. They have empty values
+[2019-10-11 13:30:56,507] [insert_data_threaded.py] [INFO] [__main__] - Creating thread 1 to insert 8 rows 
+[2019-10-11 13:30:56,508] [insert_data_threaded.py] [INFO] [__main__] - Creating thread 2 to insert 8 rows 
+[2019-10-11 13:30:56,508] [insert_data_threaded.py] [INFO] [__main__] - Acquiring lock over connection
+[2019-10-11 13:30:56,508] [insert_data_threaded.py] [INFO] [__main__] - Acquiring lock over connection
+[2019-10-11 13:31:01,603] [insert_data_threaded.py] [INFO] [__main__] - Exiting with exit code 0
+[2019-10-11 13:38:52,045] [insert_data_threaded.py] [INFO] [__main__] - Connection established
+[2019-10-11 13:38:52,046] [insert_data_threaded.py] [INFO] [__main__] - Using database testdb Table emp
+[2019-10-11 13:38:52,046] [insert_data_threaded.py] [INFO] [__main__] - Will be importing data from path /home/abisekm/Documents/Shell/shell1/datafile.txt
+[2019-10-11 13:38:52,046] [insert_data_threaded.py] [WARNING] [__main__] - Empty cell in row ['', 'Human Resources', '41354.87']. Excluding it.
+[2019-10-11 13:38:52,046] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Sal Harlick', 'Accounting', '64077.37']
+[2019-10-11 13:38:52,046] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['La verne Iorns', 'Human Resources', '64602.23']
+[2019-10-11 13:38:52,046] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Tedmund Burgher', 'Human Resources', '23151.87']
+[2019-10-11 13:38:52,046] [insert_data_threaded.py] [WARNING] [__main__] - Empty cell in row ['Zaccaria Colleford', 'Accounting', '']. Excluding it.
+[2019-10-11 13:38:52,046] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Eleni Clapston', 'Product Management', '42282.6']
+[2019-10-11 13:38:52,046] [insert_data_threaded.py] [WARNING] [__main__] - Empty cell in row ['Eachelle Alexsandrovich', '', '27170.7']. Excluding it.
+[2019-10-11 13:38:52,046] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Esmeralda Jindrak', 'Product Management', '24921.07']
+[2019-10-11 13:38:52,046] [insert_data_threaded.py] [WARNING] [__main__] - Empty cell in row ['', 'Marketing', '46833.99']. Excluding it.
+[2019-10-11 13:38:52,046] [insert_data_threaded.py] [WARNING] [__main__] - Empty cell in row ['', 'Research and Development', '30231.58']. Excluding it.
+[2019-10-11 13:38:52,046] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Nu\xc3\xb3', 'Marketing', '39939.05']
+[2019-10-11 13:38:52,047] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Oph\xc3\xa9lie', 'Marketing', '85259.42']
+[2019-10-11 13:38:52,047] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['C\xc3\xa9line', 'Accounting', '53034.42']
+[2019-10-11 13:38:52,047] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['L\xc3\xa9ane', 'Legal', '1259.6']
+[2019-10-11 13:38:52,047] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Desir\xc3\xa9e', 'Research and Development', '52388.89']
+[2019-10-11 13:38:52,047] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Jos\xc3\xa9e', 'Business Development', '26624.49']
+[2019-10-11 13:38:52,047] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['M\xc3\xa9lia', 'Product Management', '81170.13']
+[2019-10-11 13:38:52,047] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Laur\xc3\xa9lie', 'Research and Development', '35252.06']
+[2019-10-11 13:38:52,047] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['R\xc3\xa1o', 'Accounting', '71415.77']
+[2019-10-11 13:38:52,047] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['N\xc3\xa9h\xc3\xa9mie', 'Business Development', '18617.0']
+[2019-10-11 13:38:52,047] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ["Ju'an", 'Marketing', '72343.29']
+[2019-10-11 13:38:52,047] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Robert-deSylivia', ' Sales', ' 99898.009']
+[2019-10-11 13:38:52,047] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting 17 data rows
+[2019-10-11 13:38:52,047] [insert_data_threaded.py] [WARNING] [__main__] - Skipping 5 data rows. They have empty values
+[2019-10-11 13:38:52,047] [insert_data_threaded.py] [INFO] [__main__] - Creating thread 1 to insert 8 rows 
+[2019-10-11 13:38:52,047] [insert_data_threaded.py] [INFO] [__main__] - Creating thread 2 to insert 8 rows 
+[2019-10-11 13:38:52,047] [insert_data_threaded.py] [INFO] [__main__] - Acquiring lock over connection
+[2019-10-11 13:38:52,048] [insert_data_threaded.py] [INFO] [__main__] - Acquiring lock over connection
+[2019-10-11 13:38:52,049] [insert_data_threaded.py] [INFO] [__main__] - Releasing lock over connection
+[2019-10-11 13:38:52,050] [insert_data_threaded.py] [INFO] [__main__] - Releasing lock over connection
+[2019-10-11 13:38:57,144] [insert_data_threaded.py] [INFO] [__main__] - Exiting with exit code 0
+[2019-10-11 13:42:05,528] [insert_data_threaded.py] [INFO] [__main__] - Connection established
+[2019-10-11 13:42:05,528] [insert_data_threaded.py] [INFO] [__main__] - Using database testdb Table emp
+[2019-10-11 13:42:05,528] [insert_data_threaded.py] [INFO] [__main__] - Will be importing data from path /home/abisekm/Documents/Shell/shell1/datafile.txt
+[2019-10-11 13:42:05,529] [insert_data_threaded.py] [WARNING] [__main__] - Empty cell in row ['', 'Human Resources', '41354.87']. Excluding it.
+[2019-10-11 13:42:05,529] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Sal Harlick', 'Accounting', '64077.37']
+[2019-10-11 13:42:05,529] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['La verne Iorns', 'Human Resources', '64602.23']
+[2019-10-11 13:42:05,529] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Tedmund Burgher', 'Human Resources', '23151.87']
+[2019-10-11 13:42:05,529] [insert_data_threaded.py] [WARNING] [__main__] - Empty cell in row ['Zaccaria Colleford', 'Accounting', '']. Excluding it.
+[2019-10-11 13:42:05,529] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Eleni Clapston', 'Product Management', '42282.6']
+[2019-10-11 13:42:05,529] [insert_data_threaded.py] [WARNING] [__main__] - Empty cell in row ['Eachelle Alexsandrovich', '', '27170.7']. Excluding it.
+[2019-10-11 13:42:05,529] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Esmeralda Jindrak', 'Product Management', '24921.07']
+[2019-10-11 13:42:05,529] [insert_data_threaded.py] [WARNING] [__main__] - Empty cell in row ['', 'Marketing', '46833.99']. Excluding it.
+[2019-10-11 13:42:05,529] [insert_data_threaded.py] [WARNING] [__main__] - Empty cell in row ['', 'Research and Development', '30231.58']. Excluding it.
+[2019-10-11 13:42:05,529] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Nu\xc3\xb3', 'Marketing', '39939.05']
+[2019-10-11 13:42:05,529] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Oph\xc3\xa9lie', 'Marketing', '85259.42']
+[2019-10-11 13:42:05,529] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['C\xc3\xa9line', 'Accounting', '53034.42']
+[2019-10-11 13:42:05,529] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['L\xc3\xa9ane', 'Legal', '1259.6']
+[2019-10-11 13:42:05,529] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Desir\xc3\xa9e', 'Research and Development', '52388.89']
+[2019-10-11 13:42:05,529] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Jos\xc3\xa9e', 'Business Development', '26624.49']
+[2019-10-11 13:42:05,529] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['M\xc3\xa9lia', 'Product Management', '81170.13']
+[2019-10-11 13:42:05,530] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Laur\xc3\xa9lie', 'Research and Development', '35252.06']
+[2019-10-11 13:42:05,530] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['R\xc3\xa1o', 'Accounting', '71415.77']
+[2019-10-11 13:42:05,530] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['N\xc3\xa9h\xc3\xa9mie', 'Business Development', '18617.0']
+[2019-10-11 13:42:05,530] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ["Ju'an", 'Marketing', '72343.29']
+[2019-10-11 13:42:05,530] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Robert-deSylivia', ' Sales', ' 99898.009']
+[2019-10-11 13:42:05,530] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting 17 data rows
+[2019-10-11 13:42:05,530] [insert_data_threaded.py] [WARNING] [__main__] - Skipping 5 data rows. They have empty values
+[2019-10-11 13:42:05,530] [insert_data_threaded.py] [INFO] [__main__] - Inserting 8 rows using thread Thread 1
+[2019-10-11 13:42:05,530] [insert_data_threaded.py] [INFO] [__main__] - Acquiring lock over connection
+[2019-10-11 13:42:05,530] [insert_data_threaded.py] [INFO] [__main__] - Inserting 9 rows using thread Thread 2
+[2019-10-11 13:42:05,531] [insert_data_threaded.py] [INFO] [__main__] - Acquiring lock over connection
+[2019-10-11 13:42:05,532] [insert_data_threaded.py] [INFO] [__main__] - Releasing lock over connection
+[2019-10-11 13:42:05,533] [insert_data_threaded.py] [INFO] [__main__] - Releasing lock over connection
+[2019-10-11 13:42:07,589] [insert_data_threaded.py] [INFO] [__main__] - Exiting with exit code 0
+[2019-10-11 13:43:55,285] [insert_data_threaded.py] [INFO] [__main__] - Connection established
+[2019-10-11 13:43:55,285] [insert_data_threaded.py] [INFO] [__main__] - Using database testdb Table emp
+[2019-10-11 13:43:55,285] [insert_data_threaded.py] [INFO] [__main__] - Will be importing data from path /home/abisekm/Documents/Shell/shell1/datafile.txt
+[2019-10-11 13:43:55,285] [insert_data_threaded.py] [WARNING] [__main__] - Empty cell in row ['', 'Human Resources', '41354.87']. Excluding it.
+[2019-10-11 13:43:55,285] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Sal Harlick', 'Accounting', '64077.37']
+[2019-10-11 13:43:55,285] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['La verne Iorns', 'Human Resources', '64602.23']
+[2019-10-11 13:43:55,285] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Tedmund Burgher', 'Human Resources', '23151.87']
+[2019-10-11 13:43:55,285] [insert_data_threaded.py] [WARNING] [__main__] - Empty cell in row ['Zaccaria Colleford', 'Accounting', '']. Excluding it.
+[2019-10-11 13:43:55,285] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Eleni Clapston', 'Product Management', '42282.6']
+[2019-10-11 13:43:55,285] [insert_data_threaded.py] [WARNING] [__main__] - Empty cell in row ['Eachelle Alexsandrovich', '', '27170.7']. Excluding it.
+[2019-10-11 13:43:55,285] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Esmeralda Jindrak', 'Product Management', '24921.07']
+[2019-10-11 13:43:55,285] [insert_data_threaded.py] [WARNING] [__main__] - Empty cell in row ['', 'Marketing', '46833.99']. Excluding it.
+[2019-10-11 13:43:55,286] [insert_data_threaded.py] [WARNING] [__main__] - Empty cell in row ['', 'Research and Development', '30231.58']. Excluding it.
+[2019-10-11 13:43:55,286] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Nu\xc3\xb3', 'Marketing', '39939.05']
+[2019-10-11 13:43:55,286] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Oph\xc3\xa9lie', 'Marketing', '85259.42']
+[2019-10-11 13:43:55,286] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['C\xc3\xa9line', 'Accounting', '53034.42']
+[2019-10-11 13:43:55,286] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['L\xc3\xa9ane', 'Legal', '1259.6']
+[2019-10-11 13:43:55,286] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Desir\xc3\xa9e', 'Research and Development', '52388.89']
+[2019-10-11 13:43:55,286] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Jos\xc3\xa9e', 'Business Development', '26624.49']
+[2019-10-11 13:43:55,286] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['M\xc3\xa9lia', 'Product Management', '81170.13']
+[2019-10-11 13:43:55,286] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Laur\xc3\xa9lie', 'Research and Development', '35252.06']
+[2019-10-11 13:43:55,286] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['R\xc3\xa1o', 'Accounting', '71415.77']
+[2019-10-11 13:43:55,286] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['N\xc3\xa9h\xc3\xa9mie', 'Business Development', '18617.0']
+[2019-10-11 13:43:55,286] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ["Ju'an", 'Marketing', '72343.29']
+[2019-10-11 13:43:55,286] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting row ['Robert-deSylivia', ' Sales', ' 99898.009']
+[2019-10-11 13:43:55,286] [insert_data_threaded.py] [INFO] [__main__] - Will be inserting 17 data rows
+[2019-10-11 13:43:55,286] [insert_data_threaded.py] [WARNING] [__main__] - Skipping 5 data rows. They have empty values
+[2019-10-11 13:43:55,287] [insert_data_threaded.py] [INFO] [__main__] - Inserting 9 rows using thread Thread 2
+[2019-10-11 13:43:55,287] [insert_data_threaded.py] [INFO] [__main__] - Inserting 8 rows using thread Thread 1
+[2019-10-11 13:43:55,287] [insert_data_threaded.py] [INFO] [__main__] - Acquiring lock over connection
+[2019-10-11 13:43:55,287] [insert_data_threaded.py] [INFO] [__main__] - Acquiring lock over connection
+[2019-10-11 13:43:55,288] [insert_data_threaded.py] [INFO] [__main__] - Releasing lock over connection
+[2019-10-11 13:43:55,290] [insert_data_threaded.py] [INFO] [__main__] - Releasing lock over connection
+[2019-10-11 13:43:57,322] [insert_data_threaded.py] [INFO] [__main__] - Exiting with exit code 0

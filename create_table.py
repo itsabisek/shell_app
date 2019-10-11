@@ -2,7 +2,6 @@ import pymysql
 import sys
 import optparse
 import logging
-import traceback as tb
 
 formatter = logging.Formatter('%(filename)s:%(levelname)s:%(name)s:%(message)s')
 file_handler = logging.FileHandler('table_data.log')
@@ -61,29 +60,20 @@ try:
     logger.info("Create statement is - %s" % create_stmt)
 
 except pymysql.MySQLError, e:
-    logger.critical("MySQL Error: %s" % e)
-    # print "MySQL error: ", e
-    tb.print_exc()
+    logger.error("MySQL Error: %s" % e, exc_info=True)
 
 except pymysql.DatabaseError, e:
-    logger.critical("Database Error: %s" % e)
-    # print "Database Error occured: ", e
-    tb.print_exc()
+    logger.error("Database Error: %s" % e, exc_info=True)
 
 except pymysql.ProgrammingError, e:
-    logger.critical("Programming Error: %s" % e)
-    # print "Programming Error: ", e
-    tb.print_exc()
+    logger.error("Programming Error: %s" % e, exc_info=True)
 
 except pymysql.InternalError, e:
-    logger.critical("Internal Error occured: " % e)
-    # print "Internal Error occured: ", e
-    tb.print_exc()
+    logger.error("Internal Error occured: " % e, exc_info=True)
 
 except Exception, e:
-    logger.critical("Exception caught: %s" % e)
-    # print "Exception caught: ", e
-    tb.print_exc()
+    logger.error("Exception caught: %s" % e, exc_info=True)
 
 finally:
-    sys.exit(int(exit_code))
+    logger.info("Exiting with exit code-%d" % exit_code)
+    sys.exit(exit_code)

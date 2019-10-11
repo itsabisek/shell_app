@@ -4,9 +4,10 @@ import sys
 import os
 import csv
 import logging
+import thread
+import time
 
 # from concurrent.futures import ThreadPoolExecutor, as_completed
-# import thread
 
 formatter = logging.Formatter('[%(asctime)s] [%(filename)s] [%(levelname)s] [%(name)s] - %(message)s')
 file_handler = logging.FileHandler('table_data.log')
@@ -47,18 +48,27 @@ def validate_row(row):
 
 
 # Inserts data into the database using the connection passed
-# data is a list of the form - ['Name':str, 'Department':str, Salary:float]
-def insert_data(connection, data):
+# data is a list of the rows where each row is of the form - ['Name':str, 'Department':str, Salary:float]
+def insert_data(connection, data, lock, thread_name):
+
+    logger.info("Inserting %d rows using thread %s" % (len(data), thread_name))
     insert_stmt = '''
 
     INSERT INTO %(table_name)s(name,department,salary)
     VALUES(\"%(name)s\",\"%(department)s\",%(salary)f);
 
-    ''' % {"table_name": table, "name": data[0], "department": data[1], "salary": float(data[2])}
+    '''
+    if lock.locked():
+        logger.warning("Lock is alreay acquired!")
 
-    # print insert_stmt
+    logger.info('Acquiring lock over connection')
+    lock.acquire()
     with connection.cursor() as cur:
-        return cur.execute(insert_stmt)
+        for entry in data:
+            stmt = insert_stmt % {"table_name": table, "name": entry[0], "department": entry[1], "salary": float(entry[-1])}
+            cur.execute(stmt)
+    logger.info("Releasing lock over connection")
+    lock.release()
 
 
 exit_code = 1
@@ -88,6 +98,7 @@ data_path = os.path.join(os.path.abspath(os.curdir), options.data)
 
 
 try:
+    lock = thread.allocate_lock()
     conn = pymysql.connect(host=HOST, user=USERNAME, password=PASSWORD, db=db)
     logger.info("Connection established")
     logger.info("Using database %(db)s Table %(table)s" % {"db": db, "table": table})
@@ -97,12 +108,12 @@ try:
     logger.info("Will be inserting %d data rows" % len(data))
     logger.warning("Skipping %d data rows. They have empty values" % len(empty_entries))
 
-    insert_count = 0
-    for entry in data:
-        insert_count += insert_data(conn, entry)
+    thread_1 = thread.start_new_thread(insert_data, (conn, data[:len(data) // 2], lock, "Thread 1"))
+    thread_2 = thread.start_new_thread(insert_data, (conn, data[len(data) // 2:], lock, "Thread 2"))
 
+    time.sleep(2)
     exit_code = 0
-    logger.info("Inserted %d rows in db" % insert_count)
+
 
 except IOError, e:
     logger.error("IO Error: %s" % e, exc_info=True)
